@@ -1,0 +1,34 @@
+# This directory is ~4 GB, almost all of it derived or downloaded. Only the things that
+# cannot be regenerated from the scripts in this repo are tracked: the scripts themselves,
+# the findings, and the measured data.
+
+# Build outputs and third-party trees. All reproducible: hip-gfx1010/ comes from
+# build-hip-gfx1010.ps1 + src/, rocmlibs/ is a released 7z, vulkan/ and rocm/ are upstream
+# llama.cpp downloads, src/ is a git clone of llama.cpp b10630.
+hip-gfx1010/
+build-hip/
+rocm/
+rocmlibs/
+vulkan/
+src/
+
+# Logs. build_hip.log alone is 114 MB; the PowerShell-written ones are UTF-16LE.
+*.log
+*.log.txt
+HIPSDK_INSTALL_LOG.TXT
+
+# Archives and scratch.
+*.7z
+*.tmp
+*.pid
+
+# verify/ is 560 files / 192 MB, mostly disassembled code objects and raw perf-counter
+# captures from the A/B verification. Keep only the re-runnable C3 harness and its results
+# -- the raw captures are large, machine-specific, and regenerable by re-running.
+verify/*
+!verify/c3fix/
+verify/c3fix/*
+!verify/c3fix/c3-fix.sh
+!verify/c3fix/c3-fresh.sh
+!verify/c3fix/analyze.py
+!verify/c3fix/results.csv
