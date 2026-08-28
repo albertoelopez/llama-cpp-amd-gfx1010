@@ -13,7 +13,9 @@ Radeon RX 5700 XT** — a card AMD's support matrix marks unsupported, whose pre
 binaries silently report zero devices, and which ROCm-on-WSL2 does not cover.
 
 It works. A 17.3 GB Qwen3-30B-A3B MoE model runs on the 8 GB card with experts split across
-VRAM and system RAM, at roughly 12–17 t/s generation.
+VRAM and system RAM, generating at **7.9–17.3 t/s** — measured across four runs of the
+*identical* configuration. That spread is not sloppy measurement; it is the finding. See
+[Results](#results-honestly).
 
 ## What's here
 
@@ -122,4 +124,6 @@ ratios straddle 1.0, rather than averaging them into a number that hides it.
 
 ## License
 
-The scripts here are MIT. llama.cpp, ROCm and the community rocBLAS builds carry their own licenses.
+No license has been declared for this repository yet, so default copyright applies to the
+scripts here. llama.cpp, the ROCm components and the community rocBLAS builds each carry their
+own licenses, which are unaffected by this.
