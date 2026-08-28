@@ -32,3 +32,7 @@ verify/c3fix/*
 !verify/c3fix/c3-fresh.sh
 !verify/c3fix/analyze.py
 !verify/c3fix/results.csv
+
+# Python bytecode from the hero generator
+__pycache__/
+*.pyc

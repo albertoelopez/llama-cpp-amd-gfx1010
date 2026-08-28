@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect width="1200" height="630" fill="#f9f9f7"/>
+<rect x="24" y="24" width="1152" height="582" rx="14" fill="#fcfcfb"/>
+<text x="56" y="76" font-size="30" font-weight="700" fill="#0b0b0b">llama.cpp on an RX 5700 XT — HIP vs Vulkan</text>
+<text x="56" y="106" font-size="15.5" fill="#52514e">Qwen3-30B-A3B Q4_K_M · a 17.3 GB MoE model running on an 8 GB card, experts split across VRAM and system RAM</text>
+<text x="56" y="126" font-size="14" font-weight="700" fill="#0b0b0b">Paired throughput ratio, fresh context — n=4 per row</text>
+<text x="56" y="146" font-size="12.5" fill="#898781">each bar is one rep, HIP and Vulkan measured back-to-back · log scale</text>
+<line x1="230.4" y1="162" x2="230.4" y2="408" stroke="#e1e0d9" stroke-width="1"/>
+<line x1="335.1" y1="162" x2="335.1" y2="408" stroke="#e1e0d9" stroke-width="1"/>
+<line x1="572.1" y1="162" x2="572.1" y2="408" stroke="#e1e0d9" stroke-width="1"/>
+<line x1="661.6" y1="162" x2="661.6" y2="408" stroke="#e1e0d9" stroke-width="1"/>
+<rect x="447.0" y="173" width="161.2" height="14" rx="4" fill="#2a78d6"/>
+<text x="56" y="184" font-size="12.5" fill="#52514e">prefill  rep 1</text>
+<text x="616.2" y="184" font-size="12.5" font-weight="600" text-anchor="start" fill="#0b0b0b">1.68×</text>
+<rect x="447.0" y="203" width="86.9" height="14" rx="4" fill="#2a78d6"/>
+<text x="56" y="214" font-size="12.5" fill="#52514e">prefill  rep 2</text>
+<text x="541.9" y="214" font-size="12.5" font-weight="600" text-anchor="start" fill="#0b0b0b">1.33×</text>
+<rect x="268.7" y="233" width="176.3" height="14" rx="4" fill="#e34948"/>
+<text x="56" y="244" font-size="12.5" fill="#52514e">prefill  rep 3</text>
+<text x="260.7" y="244" font-size="12.5" font-weight="600" text-anchor="end" fill="#0b0b0b">0.57×</text>
+<rect x="428.0" y="263" width="17.0" height="14" rx="4" fill="#e34948"/>
+<text x="56" y="274" font-size="12.5" fill="#52514e">prefill  rep 4</text>
+<text x="420.0" y="274" font-size="12.5" font-weight="600" text-anchor="end" fill="#0b0b0b">0.94×</text>
+<rect x="447.0" y="293" width="25.2" height="14" rx="4" fill="#2a78d6"/>
+<text x="56" y="304" font-size="12.5" fill="#52514e">generate  rep 1</text>
+<text x="480.2" y="304" font-size="12.5" font-weight="600" text-anchor="start" fill="#0b0b0b">1.09×</text>
+<rect x="447.0" y="323" width="55.5" height="14" rx="4" fill="#2a78d6"/>
+<text x="56" y="334" font-size="12.5" fill="#52514e">generate  rep 2</text>
+<text x="510.5" y="334" font-size="12.5" font-weight="600" text-anchor="start" fill="#0b0b0b">1.20×</text>
+<rect x="243.3" y="353" width="201.7" height="14" rx="4" fill="#e34948"/>
+<text x="56" y="364" font-size="12.5" fill="#52514e">generate  rep 3</text>
+<text x="235.3" y="364" font-size="12.5" font-weight="600" text-anchor="end" fill="#0b0b0b">0.52×</text>
+<rect x="395.6" y="383" width="49.4" height="14" rx="4" fill="#e34948"/>
+<text x="56" y="394" font-size="12.5" fill="#52514e">generate  rep 4</text>
+<text x="387.6" y="394" font-size="12.5" font-weight="600" text-anchor="end" fill="#0b0b0b">0.85×</text>
+<line x1="446.0" y1="162" x2="446.0" y2="408" stroke="#c3c2b7" stroke-width="2"/>
+<text x="446.0" y="428" font-size="12" text-anchor="middle" fill="#898781">1.0× — parity</text>
+<text x="350.0" y="162" font-size="12" text-anchor="end" fill="#e34948">◀ Vulkan faster</text>
+<text x="542.0" y="162" font-size="12" fill="#2a78d6">HIP faster ▶</text>
+<text x="56" y="460" font-size="13.5" font-weight="600" fill="#0b0b0b">Ratios straddle 1.0 — neither backend reliably wins.</text>
+<text x="56" y="480" font-size="12.5" fill="#52514e">Whichever "wins" depends on the draw. Single benchmarks here are near-uninformative.</text>
+<rect x="772" y="122" width="372" height="132" rx="10" fill="#f0efec"/>
+<text x="794" y="174" font-size="40" font-weight="700" fill="#2a78d6">19.6×</text>
+<text x="794" y="200" font-size="13.5" font-weight="600" fill="#0b0b0b">HIP faster at 4096-token depth</text>
+<text x="794" y="222" font-size="12" fill="#52514e">Vulkan collapses to 3.1 t/s under VRAM</text>
+<text x="794" y="239" font-size="12" fill="#52514e">pressure; HIP holds 60.5. n=1.</text>
+<rect x="772" y="268" width="372" height="132" rx="10" fill="#f0efec"/>
+<text x="794" y="320" font-size="40" font-weight="700" fill="#e34948">3×</text>
+<text x="794" y="346" font-size="13.5" font-weight="600" fill="#0b0b0b">HIP run-to-run variance</text>
+<text x="794" y="368" font-size="12" fill="#52514e">44–145 t/s across identical runs.</text>
+<text x="794" y="385" font-size="12" fill="#52514e">Vulkan: 48–86. Cause unexplained.</text>
+<rect x="772" y="414" width="372" height="118" rx="10" fill="#f0efec"/>
+<text x="794" y="466" font-size="40" font-weight="700" fill="#0b0b0b">17.3 GB</text>
+<text x="794" y="492" font-size="13.5" font-weight="600" fill="#0b0b0b">model on an 8 GB card</text>
+<text x="794" y="514" font-size="12" fill="#52514e">-ngl 99 -ncmoe 28 · gfx1010 (RDNA1),</text>
+<text x="794" y="531" font-size="12" fill="#52514e">which AMD marks unsupported.</text>
+<text x="56" y="588" font-size="11.5" fill="#898781">llama.cpp b10630 · HIP SDK 6.2.4 · Ryzen 5 3600 · measured with no perf-counter sampling during timed runs, backends interleaved per rep</text>
+</svg>
